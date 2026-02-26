@@ -1,13 +1,13 @@
-import express from "express";
-import { logger } from "./middleware/logger";
-import healthRouter from "./routes/health.routes";
+import express from 'express';
+import { logger } from './middleware/logger';
+import { userRouter } from '@/components/user/';
 
 const app = express();
 
 app.use(express.json());
 
-app.use(logger);
+app.use('/users', userRouter);
 
-app.use("/health", healthRouter);
+app.use(logger);
 
 export default app;
