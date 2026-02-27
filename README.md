@@ -1,6 +1,6 @@
-# Social Feed API
+# Helpdesk API
 
-Backend for social feed application.
+Backend for helpdesk application.
 
 ## Tech stack
 
