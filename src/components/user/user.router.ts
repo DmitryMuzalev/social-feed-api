@@ -6,6 +6,8 @@ import { validate } from '@/middleware/validate';
 
 const router = Router();
 
+router.get('/', userController.getAllUsers);
+
 router.get(
   '/:id',
   validate({ params: userValidation.userIdParamsSchema }),

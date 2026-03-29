@@ -1,8 +1,9 @@
-const toNumber = (value: string | undefined, defaultValue: number) => {
+const toPositiveInt = (value: string | undefined, defaultValue: number) => {
   const n = Number(value);
-  return Number.isFinite(n) ? n : defaultValue;
+  return Number.isInteger(n) && n > 0 ? n : defaultValue;
 };
 
 export const config = {
-  bcryptSaltRounds: toNumber(process.env.BCRYPT_SALT_ROUNDS, 10),
+  port: toPositiveInt(process.env.PORT, 3000),
+  bcryptSaltRounds: toPositiveInt(process.env.BCRYPT_SALT_ROUNDS, 10),
 };

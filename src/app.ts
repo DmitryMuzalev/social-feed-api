@@ -1,6 +1,6 @@
 import express from 'express';
 import { logger } from './middleware/logger';
-import { userRouter } from '@/components/user/';
+import { userRouter } from './components/user';
 import { errorHandler, notFound } from './middleware';
 
 const app = express();
